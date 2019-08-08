@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<div th:replace="fragments/styling :: head-style"></div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Directory</title>
+    <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http:maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https:fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="css/style.css">
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+   
+</head>
+
+<body>
+    <div>
+        <div class="header-blue">
+            <div th:replace="fragments/navbar :: navbar" ></div>
+			<div th:replace="/fragments/styling :: body-links" ></div>
+             <div class="container hero">
+                <div class="row">
+                    <div class="col-lg-5 col-lg-offset-1 col-md-6 col-md-offset-0">
+                        <h1>The revolution is here.</h1>
+                        <p>Please use the form below to create a New 'To Do' Task:</p>
+
+ 						 <form action="#" th:action="@{'/membership/new'}" th:object="${todoTask}" method="post">
+  
+  	 					<div class="form-group">
+ 						<input type="text" class="form-control" placeholder="First Name..." th:value="${firstName}" name="firstName" />
+ 						</div>
+ 						<div class="form-group">
+ 						<input type="text" class="form-control" placeholder="Last Name..." th:value="${lastName}" name="lastName" />
+ 						</div>
+ 						<div class="form-group">
+ 						<input type="text" class="form-control" placeholder="Email..." th:value="${email}" name="email" />
+ 						</div>
+ 						<div class="form-group">
+ 						<input type="text" class="form-control" placeholder="Phone No..." th:value="${phone}" name="phone" />
+ 						</div>
+ 						<div class="form-group">
+ 						<input type="text" class="form-control" placeholder="Gender..." th:value="${gender}" name="gender" />
+ 						</div>
+ 						<div class="form-group">
+ 						<input type="text" class="form-control" placeholder="Professional..." th:value="${proffession}" name="professional" />
+ 						</div>
+ 						<div class="form-group">
+ 						<input type="text" class="form-control" placeholder="City..." th:value="${city}" name="city" />
+ 						</div>
+ 						<!-- <div class="form-group">
+ 						<input type="text" class="form-control" placeholder="Birthday(mm/dd)..." th:value="${birthday}" name="birthday" />
+ 						</div> -->
+                        	<button type="submit" class="btn btn-success btn-lg action-button">Submit</button>
+                        </form> 
+                    </div> 
+                  
+                   
+      			</div>
+            </div>
+            
+        </div>
+    </div>
+    <footer>
+	<div class="footer_copy">
+                <div class="container">
+                    <div class="column one">
+
+                        <div class="copyright">
+                            &copy;2019 SpringWorks! INC<a target="_blank" rel="nofollow" href=""></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
